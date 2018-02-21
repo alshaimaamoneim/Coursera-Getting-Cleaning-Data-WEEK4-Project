@@ -2,7 +2,7 @@
 # Discription
 This code book summarizes the data and variables in tidyData.txt
 
-# Data Set INFORMATION
+# Data Set Information
 
 The data set is information of a study about Human Activity Recognition Using Smartphones. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
@@ -18,13 +18,7 @@ An identifier of the subject who carried out the experiment.
 
 # The Script was designed to: 
 
-1. Merge the training and the test sets to create one data set.
-2. Extract only the measurements on the mean and standard deviation for each measurement.
-3. Use descriptive activity names to name the activities in the data set. 
-4. Appropriately label the data set with descriptive activity names. 
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-## 1. MERGING 
+## 1. Merge the training and the test sets to create one data set.
 The following text files were imported and merged. Column names were assigned at the time each file was imported and prior to merge. Files were imported individually and applicable files were then merged into sets, first all files in the TRAINING set (_train.txt) then all files in the TEST set (_test.txt). This was done prior to merging the two sets into one larger data set. The features and activity_labels files had column names assigned but were not merged and will be used later.
 
 ### Text Files Imported:
@@ -37,14 +31,14 @@ The following text files were imported and merged. Column names were assigned at
 'x_test.txt'
 'y_test.txt'
 
-## 2. EXTRACTING MEASUREMENTS 
+## 2. Extract only the measurements on the mean and standard deviation for each measurement.
 A logical vector was created identifying TRUE for the ID, mean & stdev columns and FALSE for other values. Merged data was then subsetted to only keep the relevant columns
 
-## 3. NAMING ACTIVITIES WITH DESCRIPTIVE ACTIVITY NAMES
+## 3. Use descriptive activity names to name the activities in the data set. 
 'activity_labels.txt' was merged with the subsetted data to add descriptive activity names to merged and subsetted data set. Values in 'activityId' column were then replaced with the matching values from the 'activityType' column in order to make the data easier to read.
 
-## 4. LABELING DATA SET WITH DESCRIPTIVE ACTIVITY NAMES
+## Appropriately label the data set with descriptive activity names.
 Used the 'gsub' function to clean up the column names in merged & subsetted data set. 'activityType' column removed in order to tidy data further.
 
-## 5. INDEPENDNENT TIDY DATA SET
+## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 New table was created which contains average for each variable for each activity and subject.
