@@ -2,13 +2,13 @@
 # Discription
 This code book summarizes the data and variables in tidyData.txt
 
-## Data Set INFORMATION
+# Data Set INFORMATION
 
 The data set is information of a study about Human Activity Recognition Using Smartphones. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-## Information on Attributes
+# Information on Attributes
 
 Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 Triaxial Angular velocity from the gyroscope.
@@ -16,7 +16,7 @@ A 561-feature vector with time and frequency domain variables.
 Its activity label.
 An identifier of the subject who carried out the experiment.
 
-## The Script was designed to: 
+# The Script was designed to: 
 
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement.
@@ -27,7 +27,7 @@ An identifier of the subject who carried out the experiment.
 ## 1. MERGING 
 The following text files were imported and merged. Column names were assigned at the time each file was imported and prior to merge. Files were imported individually and applicable files were then merged into sets, first all files in the TRAINING set (_train.txt) then all files in the TEST set (_test.txt). This was done prior to merging the two sets into one larger data set. The features and activity_labels files had column names assigned but were not merged and will be used later.
 
-# Text Files Imported:
+### Text Files Imported:
 'features.txt'
 'activity_labels.txt'
 'subject_train.txt'
